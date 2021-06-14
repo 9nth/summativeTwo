@@ -1,0 +1,536 @@
+// Custom sass ..
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Reset ENDS ...*/
+/* Tabs */
+
+#tabs {
+  width: 100%;
+  height: 70%;
+}
+.tab-styles {
+  background-color: #324558;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.tab-styles ul li {
+  display: inline;
+  padding: 15px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:focus {
+  background-color: white;
+  color: #324558;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+
+/* Header */
+.header-bg {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.header-logo {
+  width: 30%;
+  padding: 20px;
+}
+/* Pure NZ Logo */
+.nzlogo {
+  width: 100%;
+}
+/* Header Ends */
+/* Footer Begins */
+.footer {
+  position: absolute;
+  margin-top: 600px;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background-color: black;
+}
+.footer-logo {
+  width: 30%;
+}
+.contact-info h2 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contact-info p {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+.fa-envelope-o {
+  color: white;
+}
+
+.socials h2 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.socials p {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+/* Footer ENDS */
+/* Mt Cook Background Image */
+.bg-img {
+  background-image: url("../img/mtCookBg.jpg");
+  width: 100%;
+  height: 90%;
+  background-size: cover;
+}
+/* Header Text */
+.keen {
+  font-family: 'Staatliches';
+  font-size: 60px;
+  text-align: center;
+  padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+/* Booking System BEGINS */
+.booking-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  background-color: rgba(68, 68, 68, .3);
+}
+/* TAB ONE */
+/* Settings width of Tab */
+#tab-1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.book-trip-text {
+  font-family: 'Staatliches';
+  font-size: 50px;
+  padding-top: 50px;
+	padding-bottom: 50px;
+  text-align: center;
+
+}
+/* Div Styling & Placement */
+/* Location Line */
+.tab-1-location {
+  display: flex;
+  justify-content: center;
+	align-items: center;
+}
+.location {
+  width: 570px;
+  height: 50px;
+  font-size: 18px;
+  padding: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0.1px solid #444444;
+}
+/* LINE 2 || Accom, Dates & Guests Styling */
+/* Alignment */
+.tab-1-line2,
+.tab-1-accom,
+.tab-1-dates,
+.tab-1-guests {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+	padding: 15px;
+}
+.tab-1-line2 {
+	width: 100%;
+}
+/* Styling */
+.accom,
+.dates,
+.guests {
+  height: 50px;
+  font-size: 18px;
+  padding: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0.1px solid #444444;
+}
+
+.dates {
+	width: 250px;
+}
+
+.accom {
+	width: 200px;
+}
+
+.guests {
+  width: 120px;
+}
+/* Icons */
+.fa-map-marker,
+.fa-home,
+.fa-calendar,
+.fa-users {
+  float: left;
+  border: 0.1px solid #444444;
+  height: 48px;
+  width: 50px;
+  background-color: white;
+  line-height: 45px;
+  vertical-align: middle;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.fa-map-marker,
+.fa-home {
+  font-size: 35px;
+}
+
+.fa-calendar,
+.fa-users {
+  font-size: 25px;
+}
+/* Buttons */
+/* Continue Button */
+.tab-1-btn {
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 14px;
+  background-color: #324558;
+  border: none;
+}
+.tab-1-btn:hover {
+  background-color: #444444;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+/* Map Button */
+.map-btn {
+  margin-left: 20px;
+  width: 120px;
+  height: 50px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border-radius: 14px;
+  background-color: #ba4639;
+  border: none;
+}
+.map-btn:hover {
+  background-color: #444444;
+}
+/* Tab One ENDS */
+/* Tab Two Begins */
+
+.contact-heading {
+  font-size: 50px;
+  font-family: 'Staatliches';
+  padding-bottom: 30px;
+  padding-top: 50px;
+}
+
+#tab-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.name,
+.email,
+.phNumber,
+.address {
+	width: 250px;
+	height: 35px;
+  padding: 10px;
+  padding-left: 20px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0.1px solid #444444;
+}
+
+.name-contact,
+.email-contact,
+.number-contact,
+.address-contact {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.fa-envelope-o {
+	color: black;
+}
+
+.fa-user,
+.fa-envelope-o,
+.fa-phone,
+.fa-location-arrow {
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+  border: 0.1px solid #444444;
+  height: 33px;
+  width: 35px;
+  background-color: white;
+  line-height: 35px;
+  vertical-align: middle;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.req {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 10px;
+}
+/* Tab Two Ends */
+/* Tab Three Begins */
+#tab-3 {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+height: 100%;
+}
+
+.mealHeading {
+	font-size: 50px;
+  font-family: 'Staatliches';
+  padding-bottom: 30px;
+  padding-top: 120px;
+}
+
+.meal-container {
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+	height: 65%;
+	background-color: white;
+	padding-top: 40px;
+}
+
+.meal-text-container {
+	width: 30%;
+	height: 50%
+}
+
+.meal-image-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.meal-image {
+	width: 200px;
+	height: 200px;
+}
+
+.meal-name {
+	font-size: 30px;
+  font-family: 'Staatliches';
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.meal-info,
+.extra-info {
+	font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.extra-info {
+	margin-top: 20px;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.mealBtn {
+  height: 30px;
+  width: 200px;
+  margin-top: 20px;
+  border-radius: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mealBtn:focus {
+  border: 2px solid green;
+  background-color: #77dd77;
+  color: white;
+}
+
+/* Tab Three Ends */
+/* Tab Four Begins */
+.summary-heading {
+  font-size: 50px;
+  font-family: 'Staatliches';
+  text-align: center;
+  padding-top: 50px;
+}
+/* Tab Four Ends */
+/* Tab Five Beings */
+
+.payment-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-heading {
+  font-size: 50px;
+  font-family: 'Staatliches';
+  text-align: center;
+  padding-top: 50px;
+}
+
+.card-container,
+.cvv-container,
+.expiry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-number,
+.cvv-number,
+.expiry {
+  font-size: 18px;
+  height: 40px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0.1px solid #444444;
+  width: 300px;
+}
+/* Icons */
+.fa-credit-card,
+.fa-spinner,
+.fa-calendar-times-o {
+  font-size: 20px;
+  border: 0.1px solid #444444;
+  height: 38px;
+  width: 40px;
+  background-color: white;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+/* Tab Five ENDS */
+/* Booking System ENDS */
+/* Second Part of Home Page */
+.location-ideas {
+  position: relative;
+  padding-bottom: 200px;
+}
+
+/* Text */
+.inspo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 60px;
+  font-size: 70px;
+  font-family: 'Staatliches';
+}
+
+/* Graphics, Images and NZ Map */
+.backgroundImg,
+.graphicImg,
+.linesImg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
