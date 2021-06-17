@@ -74,7 +74,7 @@
           </div>
           <div class="tab-1-dates">
             <i class="fa fa-calendar"></i>
-            <input placeholder="MM/DD/YYYY" class="dates" type="text" name="daterange"/>
+            <input placeholder="MM/DD/YYYY" class="dates" id="dates" type="text" name="daterange"/>
           </div>
           <div class="tab-1-guests">
             <i class="fa fa-users"></i>
@@ -118,12 +118,12 @@
   <h2 class="mealHeading">Meal Selection</h2>
   <div class="meal-container">
     <div class="meal-text-container">
-      <h4 class="meal-name">Meal Name</h4>
-      <p class="meal-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <p class="extra-info">Serves 4</p>
+      <h4 class="meal-name"></h4>
+      <p class="meal-info"></p>
+      <p class="extra-info"></p>
     </div>
     <div class="meal-image-container">
-      <img class="meal-image" src="img/dinner.jpg" alt="">
+      <img class="meal-image" src="" alt="">
       <button class="mealBtn">Select</button>
     </div>
   </div>
@@ -135,14 +135,23 @@
 <!-- Tab Four Begins  -->
 <div id="tab-4">
   <h2 class="summary-heading">Trip Summary</h2>
-<div class="summary-image"><img src="" alt=""></div>
-  <div class="sumarry-text">
-    <h3 class="hotel-name"></h3>
-    <p class="summary-dates"></p>
-    <p class="summary-guests"></p>
-    <p class="summary-meal"></p>
-    <p class="summary-total"></p>
-  </div>
+    <div class="trip-summary-container">
+      <div ><img class="summary-image" src="" alt=""></div>
+        <div class="trip-details-container">
+          <h3 class="accom-name"></h3>
+          <p class="summary-dates"><i class="fa fa-calendar-check-o"></i></p>
+          <p class="summary-guests"><i class="fa fa-address-book"></i></p>
+          <p class="summary-meal"><i class="fa fa-cutlery"></i></p>
+          <p class="summary-total">Total:</p>
+        </div>
+        <div class="contact-details-container">
+          <p class="summary-name">Name</p>
+          <p class="summary-email">Email</p>
+          <p class="summary-number">Number</p>
+          <p class="summary-address">Adress</p>
+        </div>
+    </div>
+
     <div class="btn-container">
       <button id="tabFourCont" class="tab-1-btn" type="continue" name="tab-1-btn">Continue</button>
     </div>
