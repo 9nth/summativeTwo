@@ -6,6 +6,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <!-- Date Picker -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -22,18 +23,46 @@
 <!-- Header -->
 <div class="header-bg">
   <div class="header-logo">
-    <img class="nzlogo" src="img/purenz.png" alt="">
+    <img class="nzlogo" src="img/purenz.svg" alt="">
+  </div>
+  <div class="header-text">
+    <h4 class="header-1">Inspiration</h4>
+    <h4 class="header-2">Contact</h4>
+    <h4 class="header-3">Other Websites</h4>
   </div>
 </div>
 
 <!-- Header ENDS -->
+  <div id="intro" class="intro">
+    <div class="intro-bg-img">
+      <img src="img/roysPeak.jpg" alt="">
+    </div>
+    <div class="intro-text">
+      <img class="intro-logo" src="img/purenzblk.svg" alt="">
+      <h1 class="keen"> Planning to come down South? We've got you</h1>
+      <div id="hide-show" class="hide-show-btn">
+        <button id="show">Book Your Trip!</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="experience">
+    <h2 class="inspo">Need some inspiration? We recommend these spots...</h2>
+    <button id="scroll-down" class="fa fa-arrow-down"></button>
+  </div>
+
 <!-- Mt Cook Background Image -->
-<div class="bg-img">
+<div id="bg-img" style="display:none" class="bg-img">
 <!-- BG Image ENDS -->
-<!-- Header Text -->
-<h1 class="keen">Keen on a trip down south? We'd love to have you!</h1>
+
+
+
+
+
+  <!-- Below * Intro Div Ends -->
+
 <!-- Booking System BEGINS -->
-<div class="booking-container">
+<div style="display:none" id="booking-container" class="booking-container">
   <div id="tabs">
     <div class="tab-styles">
       <ul>
@@ -44,6 +73,7 @@
         <li><a href="#tab-5">Payment</a></li>
       </ul>
     </div>
+
 <!-- Tab One Begins -->
   <div id="tab-1" data-parsley-validate>
     <h2 class="book-trip-text">Book your trip!</h2>
@@ -124,7 +154,7 @@
     </div>
     <div class="meal-image-container">
       <img class="meal-image" src="" alt="">
-      <button class="mealBtn">Select</button>
+      <button id="mealBtn" class="mealBtn">Select</button>
     </div>
   </div>
   <div class="btn-container">
@@ -139,16 +169,22 @@
       <div ><img class="summary-image" src="" alt=""></div>
         <div class="trip-details-container">
           <h3 class="accom-name"></h3>
-          <p class="summary-dates"><i class="fa fa-calendar-check-o"></i></p>
-          <p class="summary-guests"><i class="fa fa-address-book"></i></p>
-          <p class="summary-meal"><i class="fa fa-cutlery"></i></p>
+          <div class="dateSummaryContainer">
+            <i class="fa fa-calendar-check-o"></i><p class="summary-dates"></p>
+          </div>
+          <div class="guestSummaryContainer">
+            <i class="fa fa-address-book"></i><p class="summary-guests"></p>
+          </div>
+          <div class="mealSummaryContainer">
+            <i class="fa fa-cutlery"></i><p class="summary-meal"></p>
+          </div>
           <p class="summary-total">Total:</p>
         </div>
         <div class="contact-details-container">
           <p class="summary-name">Name</p>
           <p class="summary-email">Email</p>
           <p class="summary-number">Number</p>
-          <p class="summary-address">Adress</p>
+          <p class="summary-address">Address</p>
         </div>
     </div>
 
@@ -190,8 +226,6 @@
   <img class="backgroundImg" src="img/backgroundColour.png">
   <img class="graphicImg" src="img/nzGraphic.png">
   <img class="linesImg" src="img/lines.png">
-  <!-- <img class="picturesImg" src="img/locations.png"> -->
-  <h2 class="inspo">Need some inspiration? We recommend these spots...</h2>
 </div>
 <!-- Second Section ENDS -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>

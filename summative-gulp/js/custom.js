@@ -16,7 +16,7 @@ var data = {
       pricePerNight: 90,
     },
     house: {
-      place: 'Lake Wanaka (Private Home)',
+      place: '22 Waimana Pl, Wanaka',
       pricePerNight: 240,
     }
   },
@@ -32,10 +32,11 @@ var data = {
   // Above ^ Meals Ends
   image: {
     dinner: 'img/dinner.jpg',
-    breakfast: 'img/breakfast.jpg',
-    fiordland: 'img/lakeMarian.jpg',
-    wanaka: 'img/roysPeak.jpg',
-    cook: 'img/mtCook.jpg',
+    cookBreakfast: 'img/cookbreakfast.jpg',
+    fiordBreakfast: 'img/fiordbreakfast.jpg',
+    fiordland: 'img/fiordland.png',
+    wanaka: 'img/roysPeak.png',
+    cook: 'img/mtCook.png',
   },
   // Above ^ Img Ends
 };
@@ -53,10 +54,7 @@ var tabFourBtn = document.getElementById('tabFourCont');
 
   // Contact details (PULLING)
 
-  // Meal Selection (PUSHING)
-var mealName = document.querySelector('.meal-name').value;
-var mealInfo = document.querySelector('.meal-info').value;
-var extraInfo = document.querySelector('.extra-info').value;
+
 
 
 
@@ -68,7 +66,10 @@ tabOneBtn.onclick = function () {
   var guestSlt = document.querySelector('.guests').value;
   var locationSlt = document.querySelector('.location').value;
   var accomSlt = document.querySelector('.accom').value;
-
+  // Meal Selection (PUSHING)
+  var mealName = document.querySelector('.meal-name');
+  var mealInfo = document.querySelector('.meal-info');
+  var extraInfo = document.querySelector('.extra-info');
 
   // Pushing data to Trip Summary Page
   var summaryGuests = document.querySelector('.summary-guests');
@@ -83,13 +84,36 @@ tabOneBtn.onclick = function () {
 // Tab 1
 // *** Use Case One
   if (locationSlt === 'fiordland' && accomSlt === 'hotel' && guestSlt > 0) {
-    summaryGuests.textContent = guestSlt;
+    summaryGuests.textContent = guestSlt + ' Guests';
     summaryAccomName.textContent = data.accom.hotel.place;
     summaryImage.src = data.image.fiordland;
-    mealImage.src = data.image.breakfast;
+    mealImage.src = data.image.fiordBreakfast;
+    mealName.textContent = data.meals.breakfastName;
+    mealInfo.textContent = data.meals.breakfastAbout;
+    extraInfo.textContent = data.meals.breakfastInfo;
   }
 
+// Use Case Two
+if (locationSlt === 'tekapo' && accomSlt === 'hostel' && guestSlt > 0) {
+  summaryGuests.textContent = guestSlt;
+  summaryAccomName.textContent = data.accom.hostel.place;
+  summaryImage.src = data.image.cook;
+  mealImage.src = data.image.cookBreakfast;
+  mealName.textContent = data.meals.breakfastName;
+  mealInfo.textContent = data.meals.breakfastAbout;
+  extraInfo.textContent = data.meals.breakfastInfo;
+}
 
+// Use Case Three
+if (locationSlt === 'wanaka' && accomSlt === 'house' && guestSlt > 0) {
+  summaryGuests.textContent = guestSlt;
+  summaryAccomName.textContent = data.accom.house.place;
+  summaryImage.src = data.image.wanaka;
+  mealImage.src = data.image.dinner;
+  mealName.textContent = data.meals.dinnerName;
+  mealInfo.textContent = data.meals.dinnerAbout;
+  extraInfo.textContent = data.meals.breakfastInfo;
+}
 
 };
 // Above ^ Tab One Function Ends
@@ -120,8 +144,6 @@ var mealBtn = document.querySelector('.mealBtn');
 
 
 
-  console.log(mealBtn.classList.toggle("mealBtnSlt"));
-
 
 };
 // Above ^ Tab Three Function Ends
@@ -129,22 +151,33 @@ var mealBtn = document.querySelector('.mealBtn');
   $( function() {
     $( "#tabs" ).tabs();
   } );
+// Shows Booking Container on click of "Book  your trip!" Button
+    $("#show").click(function(){
+      $("#bg-img").show();
+      $("#booking-container").show();
+      $("#intro").hide();
+      $("#hide-show").hide();
+      $("#scroll-down").hide();
+      $(".experience").hide();
+      $("#tabs").tabs("option", "active", 0);
+    });
 
 // Continue to next tab ..
-$('#tabOneCont').click(function() {
-    $("#tabs").tabs("option", "active", 1);
-});
 
-$('#tabTwoCont').click(function() {
+$('#tabOneCont').click(function() {
     $("#tabs").tabs("option", "active", 2);
 });
 
-$('#tabThreeCont').click(function() {
+$('#tabTwoCont').click(function() {
     $("#tabs").tabs("option", "active", 3);
 });
 
-$('#tabFourCont').click(function() {
+$('#tabThreeCont').click(function() {
     $("#tabs").tabs("option", "active", 4);
+});
+
+$('#tabFourCont').click(function() {
+    $("#tabs").tabs("option", "active", 5);
 });
 
 // Date Range Picker
@@ -153,7 +186,6 @@ $(function() {
     opens: 'left'
   }, function(start, end, label) {
 
-    var summaryDates = document.querySelector('.summary-dates').value;
     // Above ^ Grabs the date selector
     var dates = start.format('DD-MM-YYYY') + ' to ' + end.format('DD-MM-YYYY');
     // Above ^ Shows what dates have been picked
@@ -165,7 +197,15 @@ $(function() {
 
 
 
+// Toggle Meal Button
+$( "#mealBtn" ).click(function() {
+  $( this ).toggleClass( "mealBtnSlt" );
+var mealBtn = document.querySelector('#mealBtn');
 
+
+});
+
+console.log(mealBtn);
 
 
 

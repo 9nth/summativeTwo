@@ -82,19 +82,32 @@ a:focus {
 
 /* Header */
 .header-bg {
-  width: 100%;
-  height: auto;
   background-color: black;
+  width: 100%;
+  position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  z-index: 99;
 }
+
+.header-text {
+  margin: auto;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+}
+
 .header-logo {
   width: 30%;
   padding: 20px;
 }
 /* Pure NZ Logo */
 .nzlogo {
-  width: 100%;
+  width: 45%;
 }
 /* Header Ends */
 /* Footer Begins */
@@ -138,34 +151,140 @@ a:focus {
 /* Footer ENDS */
 /* Mt Cook Background Image */
 .bg-img {
-  background-image: url("../img/mtCookBg.jpg");
+  background-image: url("../img/mtCookBg(1).jpg");
   width: 100%;
-  height: 90%;
+  height: 75%;
   background-size: cover;
+  margin-bottom: 250px;
 }
-/* Header Text */
-.keen {
-  font-family: 'Staatliches';
-  font-size: 60px;
-  text-align: center;
-  padding-top: 50px;
-	padding-bottom: 20px;
+// Intro Page
+.intro {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 75%;
+  background-color: #f8f8ff;
+  z-index: 10;
 }
 
+.intro-bg-img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: #f8f8ff;
+  position: relative;
+}
+
+.intro-bg-img img {
+  width: 100%;
+  height: auto;
+}
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+
+}
+/* Header Text */
+.intro-logo {
+  padding-top: 200px;
+  padding-bottom: 150px;
+}
+
+.keen {
+  font-family: 'Staatliches';
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.hide-show-btn {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.experience {
+  height: 150px;
+  margin: auto;
+  font-family: 'Staatliches';
+  font-size: 25px;
+  font-weight: 800;
+  background-color: #324558;
+  position: relative;
+  color: white;
+  padding: 60px;
+  border-radius: 60px;
+  text-align: center;
+  width: 60%;
+  z-index: 30;
+  top: -130px;
+}
+
+#scroll-down {
+  border-radius: 60px;
+  height: 60px;
+  width: 60px;
+  margin-top: 80px;
+}
+
+.inspo {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 60px;
+  font-family: 'Staatliches';
+}
+
+#show {
+  width: 300px;
+  height: 70px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  border-radius: 13px;
+  border: none;
+  font-weight: 800;
+  background-color: #324558;
+  color: white;
+}
+
+.three-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-test img {
+  width: 100%;
+}
+.right-test img {
+  width: 100%;
+}
 /* Booking System BEGINS */
 .booking-container {
   display: flex;
   justify-content: center;
   position: relative;
   margin: 0;
-  top: 40%;
+  top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 80%;
   height: 70%;
   background-color: rgba(68, 68, 68, .3);
+
 }
+
+
+
+
 /* TAB ONE */
 /* Settings width of Tab */
 #tab-1 {
@@ -175,12 +294,12 @@ a:focus {
 }
 
 .book-trip-text {
-  font-family: 'Staatliches';
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
   font-size: 50px;
   padding-top: 50px;
 	padding-bottom: 50px;
   text-align: center;
-
 }
 /* Div Styling & Placement */
 /* Location Line */
@@ -207,8 +326,14 @@ a:focus {
   display: flex;
   justify-content: center;
   margin-top: 5px;
-	padding: 15px;
+	padding-top: 15px;
 }
+
+.tab-1-accom,
+.tab-1-dates {
+  padding-right: 30px;
+}
+
 .tab-1-line2 {
 	width: 100%;
 }
@@ -233,7 +358,13 @@ a:focus {
 }
 
 .guests {
-  width: 120px;
+  width: 90px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /* Icons */
 .fa-map-marker,
@@ -300,6 +431,7 @@ a:focus {
 /* Tab Two Begins */
 
 .contact-heading {
+  text-align: center;
   font-size: 50px;
   font-family: 'Staatliches';
   padding-bottom: 30px;
@@ -365,6 +497,7 @@ a:focus {
   color: white;
   font-family: 'Open Sans', sans-serif;
   padding-top: 10px;
+  text-align: center;
 }
 /* Tab Two Ends */
 /* Tab Three Begins */
@@ -377,35 +510,44 @@ height: 100%;
 }
 
 .mealHeading {
-	font-size: 50px;
   font-family: 'Staatliches';
-  padding-bottom: 30px;
-  padding-top: 120px;
+  font-size: 50px;
+  padding-top: 50px;
+	padding-bottom: 50px;
+  text-align: center;
 }
 
 .meal-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 	border-radius: 5px;
-	display: flex;
-	justify-content: space-around;
-	width: 30%;
-	height: 65%;
-	background-color: white;
+  margin: auto;
+	width: 35%;
+	height: 71%;
 	padding-top: 40px;
 }
 
 .meal-text-container {
-	width: 30%;
-	height: 50%
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+	height: 30%;
+  background-color: white;
 }
 
 .meal-image-container {
 	display: flex;
-	flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .meal-image {
-	width: 200px;
-	height: 200px;
+	width: 100%;
+	height: auto;
 }
 
 .meal-name {
@@ -456,17 +598,17 @@ height: 100%;
 }
 
 .summary-heading {
-  font-size: 50px;
   font-family: 'Staatliches';
+  font-size: 50px;
+  padding-top: 50px;
+	padding-bottom: 50px;
   text-align: center;
-  padding-top: 190px;
-  padding-bottom: 50px;
 }
 
 .trip-summary-container {
   height: 350px;
   width: 53%;
-  align-items: center;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
@@ -535,7 +677,24 @@ height: 100%;
   width: 300px;
 }
 
+.dateSummaryContainer,
+.guestSummaryContainer,
+.mealSummaryContainer {
+	width: 100%;
+	display: flex;
+  align-items: center;
+}
 
+.fa-calendar-check-o,
+.fa-address-book,
+.fa-cutlery {
+	margin-left: 10px;
+  line-height: 35px;
+  vertical-align: middle;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 
 /* Tab Four Ends */
 /* Tab Five Beings */
@@ -597,20 +756,11 @@ height: 100%;
 /* Booking System ENDS */
 /* Second Part of Home Page */
 .location-ideas {
+  top: -270px;
   position: relative;
   padding-bottom: 200px;
+  z-index: 2;
 }
-
-/* Text */
-.inspo {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  padding: 60px;
-  font-size: 70px;
-  font-family: 'Staatliches';
-}
-
 /* Graphics, Images and NZ Map */
 .backgroundImg,
 .graphicImg,
