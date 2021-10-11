@@ -731,22 +731,6 @@ new mapboxgl.Marker(elC)
 .addTo(map);
 // Fiordland Popup Ends
 
-// Tekapo Popup
-// The Popup itself & The Content Inside
-var tekapo = [170.482217, -44.002690];
-var tekapoPopup = new mapboxgl.Popup({ offset: 25 }).setText(
-'hello'
-);
-
-// Creates the DOM Element for the marker (Including Image)
-var elD = document.createElement('divD');
-elD.id = 'tekapoMarker';
-
-// Creates a Marker & Adds it to Map
-new mapboxgl.Marker(elD)
-.setLngLat(tekapo)
-.setPopup(tekapoPopup)
-.addTo(map);
 // MapBox Code ENDS
 
 // iife ENDS
