@@ -666,7 +666,7 @@ $(".reservation-btn-1").click(function () {
     });
 
 // MapBox
-mapboxgl.accessToken = 'pk.eyJ1IjoiOW50aCIsImEiOiJja3A1eHMzdXMwZG9zMm9ud3p3MGt1NTZqIn0.cDeS2l13wdnMmMVGlDXJiw';
+mapboxgl.accessToken = 'pk.eyJ1IjoiOW50aCIsImEiOiJja3VtMXBrdHozbjR2MnFuemZkZnJieHJ3In0.6-vhJ2zkzC31iuHD_uxYsA';
 
 // Pop Ups
 // Wanaka Pop Up
